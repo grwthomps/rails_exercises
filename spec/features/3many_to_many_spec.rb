@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe "Many to Many Controller Actions" do
-  it "can show owners and their dogs" do
+  xit "can show owners and their dogs" do
     samson = Dog.create!(name: "Samson", breed: "Golden Retriever", age: 14)
     phoebe = Dog.create!(name: "Phoebe", breed: "Golden Doodle", age: 11)
     odell = Dog.create!(name: "Odell", breed: "schnoodle", age: 7)
@@ -29,7 +29,7 @@ RSpec.describe "Many to Many Controller Actions" do
     end
   end
 
-  it "can create a new owner for a dog" do
+  xit "can create a new owner for a dog" do
     phoebe = Dog.create!(name: "Phoebe", breed: "Golden Doodle", age: 11)
 
     visit "/dogs/#{phoebe.id}/owners/new"
@@ -50,7 +50,7 @@ RSpec.describe "Many to Many Controller Actions" do
     end
   end
 
-  it "can give an owner a new dog by selecting from a list of all dogs" do
+  xit "can give an owner a new dog by selecting from a list of all dogs" do
     samson = Dog.create!(name: "Samson", breed: "Golden Retriever", age: 14)
     phoebe = Dog.create!(name: "Phoebe", breed: "Golden Doodle", age: 11)
     odell = Dog.create!(name: "Odell", breed: "schnoodle", age: 7)
@@ -69,7 +69,7 @@ RSpec.describe "Many to Many Controller Actions" do
     end
   end
 
-  it "an owner can fill in a form with comma separated dog names to adopt" do
+  xit "an owner can fill in a form with comma separated dog names to adopt" do
     samson = Dog.create!(name: "Samson", breed: "Golden Retriever", age: 14)
     phoebe = Dog.create!(name: "Phoebe", breed: "Golden Doodle", age: 11)
     odell = Dog.create!(name: "Odell", breed: "schnoodle", age: 7)
